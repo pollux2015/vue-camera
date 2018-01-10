@@ -104,7 +104,7 @@ export default {
     },
     toCanvas() {
       const dataUrl = this.previewCanvas(this.videoEl);
-      this.$emit('takeshot', dataUrl)
+      this.$emit('tocanvas', dataUrl);
       if (this.maxView == 0) {
         return;
       }
@@ -233,5 +233,9 @@ export default {
 }
 
 .camera-canvas-item:hover {}
-
+.camera-outer:after{
+  content: '';
+  display: block;
+  clear: both;
+}
 </style>
