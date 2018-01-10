@@ -4,6 +4,11 @@ vue-camera，一个自己写的vue插件，getusermedia调用摄像头拍照与�
 ### 演示(demo)
 [demo](https://pollux2015.github.io/vue-camera/)
 
+### Install
+```javascript
+npm install vue-camera
+```
+
 ### How to use
 
 组件调用
