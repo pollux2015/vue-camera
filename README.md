@@ -6,13 +6,6 @@ vue-camera，一个自己写的vue插件，getusermedia调用摄像头拍照与�
 
 ### How to use
 
-如果你的项目使用vue-cli搭建的 那么请这样使用:
-```javascript
-import Vue from 'vue'
-import vueCamera from 'vue-camera'
-Vue.use(vueCamera)
-```
-
 组件调用
 ```javascript
 import camera from 'vue-camera'

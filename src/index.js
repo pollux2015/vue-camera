@@ -1,2 +1,2 @@
-import vueCamera from './camera.vue';
+import vueCamera from './vue-camera.vue';
 export default vueCamera;

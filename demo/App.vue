@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import Camera from '@/camera'
+import Camera from '@/vue-camera'
 
 export default {
   name: 'app',
