@@ -1,7 +1,5 @@
 # vue-camera
 vue-camera，一个自己写的vue插件，getusermedia调用摄像头拍照与生成canvas, 毕设做完会继续填坑~~
-### Install
-`npm install vue-dragging`
 
 ### 演示(demo)
 [demo](https://pollux2015.github.io/vue-camera/)
