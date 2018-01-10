@@ -8,6 +8,12 @@ vue-camera，一个自己写的vue插件，getusermedia调用摄像头拍照与�
 
 组件调用
 ```javascript
+<template>
+  <div>
+    <Camera/>
+  </div>
+</template>
+
 import camera from 'vue-camera'
 export default {
   name: 'app',
