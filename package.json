@@ -1,9 +1,10 @@
 {
   "name": "vue-camera",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "pollux<605872263@qq.com>",
-  "private": true,
+  "version": "1.0.1",
+  "description": "vue-camera，一个自己写的vue插件，getusermedia调用摄像头拍照与生成canvas",
+  "author": "pollux2015<m18664357411@163.com>",
+  "main": "src/index.js",
+  "licence": "ISC",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
