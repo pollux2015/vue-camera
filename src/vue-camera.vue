@@ -149,6 +149,7 @@ export default {
   color: #fff;
   font-size: 18px;
   vertical-align: middle;
+  text-align: center;
 }
 
 .camera-control {
