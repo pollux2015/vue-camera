@@ -1,6 +1,6 @@
 {
   "name": "vue-camera",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue-camera，一个自己写的vue插件，getusermedia调用摄像头拍照与生成canvas",
   "author": "pollux2015<m18664357411@163.com>",
   "main": "src/index.js",
