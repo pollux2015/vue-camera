@@ -54,6 +54,7 @@ export default {
       videoEl: null,
       msg: this.placement,
       canvasGroup: [],
+      stream:null,
     }
   },
   computed: {
@@ -68,21 +69,23 @@ export default {
   },
   methods: {
     cameraOn() {
-      getUserMedia((err, stream) => {
+      var _this = this
+      getUserMedia(function(err, stream){
         if (err) {
           console.log(err)
-          this.msg = err.name;
+          _this.msg = err.name;
           this.$emit('error', err);
         } else {
-          this.cameraon = true;
-          this.stream = stream;
-          if (this.videoEl.mozSrcObject !== undefined) { // FF18a
-            this.videoEl.mozSrcObject = stream;
-          } else if (this.videoEl.srcObject !== undefined) {
-            this.videoEl.srcObject = stream;
+          _this.cameraon = true;
+          _this.stream = stream;
+          if (_this.videoEl.mozSrcObject !== undefined) { // FF18a
+            _this.videoEl.mozSrcObject = stream;
+          } else if (_this.videoEl.srcObject !== undefined) {
+            _this.videoEl.srcObject = stream;
           } else { // FF16a, 17a
-            this.videoEl.src = stream;
+            _this.videoEl.src = window.URL.createObjectURL(stream)||stream;
           }
+          _this.videoEl.play()
         }
       });
     },
@@ -97,6 +100,7 @@ export default {
       }
     },
     previewCanvas(el) {
+      console.log(el)
       this.context.fillStyle = "#000";
       this.context.fillRect(0, 0, this.ow, this.oh);
       this.context.drawImage(el.target || el, 0, 0, this.ow, this.oh);
@@ -104,14 +108,15 @@ export default {
     },
     toCanvas() {
       const dataUrl = this.previewCanvas(this.videoEl);
-      this.$emit('tocanvas', dataUrl);
+      // this.$emit('toCanvas', dataUrl);
       if (this.maxView == 0) {
         return;
       }
       if (this.canvasGroup.length + 1 > this.maxView) {
         this.canvasGroup.pop();
       }
-      this.canvasGroup.unshift(this.canvasEl.toDataURL());
+      this.canvasGroup.unshift(dataUrl);
+      console.log('dataUrl')
     }
 
   }
